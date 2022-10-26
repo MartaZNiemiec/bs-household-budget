@@ -1,0 +1,138 @@
+<!DOCTYPE HTML>
+<html lang="pl">
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<title>Budżet domowy - dodaj wydatek</title>
+	
+	<meta name="description" content="Aplikacja ułatwiająca zarządzanie budżetem domowym." />
+	<meta name="keywords" content="budżet, finanse, dom, lifestyle" />
+		
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" 
+		integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css" type="text/css" />
+	<link rel="stylesheet" href="fontello/css/fontello.css">	
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;subset=latin-ext" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+	
+</head>
+
+<body>
+<div class="container overflow-hidden">
+	<header>	
+		<h1>budżet domowy</h1>
+	</header>
+
+	<main>
+	
+	<nav class="navbar navbar-expand-md navbar-dark bg-transparent">
+	    <div class="order-0 d-flex justify-content-start">
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".dual-collapse2">
+				<i class="icon-menu"></i>
+			</button>
+			<a href="main.html" class="main-page">
+				<i class="icon-home"></i>
+			</a>
+		</div>
+		<div class="navbar-collapse collapse order-1 order-md-0 dual-collapse2">
+			<div class="navbar-nav mx-auto">
+				<a class="nav-item nav-link" href="balance.html">przeglądaj bilans</a>
+				<a class="nav-item nav-link" href="income.html">dodaj przychód</a>
+				<a class="nav-item nav-link" href="expense.html">dodaj wydatek</a>
+
+			</div>
+		</div>
+
+		<div class="ms-auto">
+			<a href="settings.html" class="settings">
+				<i class="icon-cogs"></i>
+			</a>
+			<a href="logout.html" class="logout">
+				<i class="icon-logout"></i>
+			</a>
+		</div>
+	</nav>
+	
+	<article>
+	
+		<header>
+			<h2 class="settings-page">ustawienia</h2>
+		</header>	
+		
+		<form class="settings-page">
+			<section id="change-password">
+				<h3 class="settings-page">ZMIANA HASŁA</h3>
+				<div class="row d-flex justify-content-center">
+					<div class="col-7 col-sm-5 col-md-4 p-2 d-flex">
+						<input type="password" class="form-control" placeholder="nowe hasło" aria-label="nowe hasło" onfocus="this.placeholder=''" onblur="this.placeholder='nowe hasło'">
+					</div>
+					<div class="col-7 col-sm-5 p-2 col-md-4">
+						<input type="password" class="form-control" placeholder="potwórz hasło" aria-label="potwórz hasło" onfocus="this.placeholder=''" 
+							onblur="this.placeholder='potwórz nowe hasło'">
+					</div>
+					<div class="col-12 col-md-3 p-2 d-flex justify-content-center">
+						<input type="submit" class="col-5 col-md-10 btn btn-outline-success" value="Zatwierdź">
+					</div>
+				</div>
+			</section>
+			
+			<section id="edit-budget">
+				<h3 class="settings-page">EDYCJA BUDŻETU</h3>
+				<div class="row d-flex justify-content-center">
+					<div class="col-7 col-md-6">
+						<div class="row d-flex justify-content-center">
+							<div class="col-11 col-md-10 p-1">
+								<label for="type">Rodzaj</label>
+								<select id="type" class="form-select" name="type">
+									<option>przychód</option>
+									<option>wydatek</option>
+								</select>
+							</div>
+							
+							<div class="col-11 col-md-10 p-1">
+								<label for="search">Słowo kluczowe</label>
+								<input type="search" class="form-control" id="search" name="?">
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-7 col-md-6">
+						<div class="row d-flex justify-content-center">
+							<div class="col-11 col-md-10 p-1">
+								<label for="date">Od (data)</label>
+								<input type="date" class="form-control" id="date" name="date">
+							</div>
+							
+							<div class="col-11 col-md-10 p-1">
+								<label for="date">Do (data)</label>
+								<input type="date" class="form-control" id="date" name="date">
+							</div>
+						</div>
+					</div>
+						
+					<div class="col-12 p-2 d-flex justify-content-center">
+						<input type="submit" class="col-5 btn btn-outline-success" value="Szukaj">
+					</div>
+				</div>
+			</section>
+
+		</form>
+		
+	</article>
+	
+	</main>
+	
+	<footer>
+		<i class="icon-mail"></i> marta.gonsiorowska@gmail.com
+	</footer>
+</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+
+</body>
+</html>
